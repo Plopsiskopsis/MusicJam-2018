@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://gfx/space.png" type="Texture" id=1]
 [ext_resource path="res://scenes/DirectionalLight.gd" type="Script" id=2]
 [ext_resource path="res://scenes/mainship.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Camera.gd" type="Script" id=4]
-[ext_resource path="res://scenes/musicship.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/bigship.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Camera2.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Camera3.gd" type="Script" id=6]
+[ext_resource path="res://scenes/musicship.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/bigship.tscn" type="PackedScene" id=8]
 
 [sub_resource type="PanoramaSky" id=1]
 
@@ -92,7 +94,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Background" ]
 
-[node name="level" type="Spatial"]
+[node name="level" type="Spatial" index="0"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 
@@ -150,14 +152,49 @@ far = 500.0
 script = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="musicship" parent="." index="4" instance=ExtResource( 5 )]
+[node name="Camera2" type="Camera" parent="." index="4"]
+
+transform = Transform( -4.37114e-008, -8.74228e-008, -1, 0, -1, 8.74228e-008, -1, 3.82137e-015, 4.37114e-008, 0, 20, 0 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 500.0
+script = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Camera3" type="Camera" parent="." index="5"]
+
+transform = Transform( -4.37114e-008, -8.74228e-008, -1, 0, -1, 8.74228e-008, -1, 3.82137e-015, 4.37114e-008, 0, 100, 0 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 500.0
+script = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="musicship" parent="." index="6" instance=ExtResource( 7 )]
 
 transform = Transform( 2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -2.98524, 1.91801, 15.033 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="bigship" parent="." index="5" instance=ExtResource( 6 )]
+[node name="bigship" parent="." index="7" instance=ExtResource( 8 )]
 
 transform = Transform( 2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 4, 0, 20 )
-_sections_unfolded = [ "Transform" ]
 
 
