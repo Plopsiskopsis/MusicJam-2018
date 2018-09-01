@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Venus.wav-dfbd699ba67d0f7da3a75f79c27d0f4c.sample"
+
+[deps]
+
+source_file="res://music/from SketchyLogic/Venus.wav"
+dest_files=[ "res://.import/Venus.wav-dfbd699ba67d0f7da3a75f79c27d0f4c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
