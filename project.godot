@@ -11,7 +11,13 @@ config_version=3
 [application]
 
 config/name="MusicJam2018"
+run/main_scene="res://scenes/splash.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+menu="*res://scenes/menu.tscn"
+Globals="*res://scenes/Globals.tscn"
 
 [rendering]
 
