@@ -8,7 +8,7 @@ script/source = "extends Sprite
 
 "
 
-[node name="splash" type="Sprite"]
+[node name="splash" type="Sprite" index="0"]
 
 position = Vector2( 512, 150 )
 texture = ExtResource( 1 )

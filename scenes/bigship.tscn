@@ -318,6 +318,7 @@ material/12 = null
 material/13 = null
 material/14 = null
 material/15 = null
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="1"]
 
