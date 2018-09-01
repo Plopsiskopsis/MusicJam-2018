@@ -4,6 +4,8 @@
 
 [node name="Globals" type="Node" index="0"]
 
+pause_mode = 2
 script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
 
 

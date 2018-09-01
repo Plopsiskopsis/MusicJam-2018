@@ -6,9 +6,12 @@ func _input(event):
 
 func _on_start_pressed():
 	if Globals.lvl == 0:
+		Globals.lvl = 1
 		get_tree().change_scene_to(Globals.lvl1)
+		$menubg.hide()
 	else:
 		pass
+	get_tree().paused = false
 	hide()
 
 func _on_options_pressed():
