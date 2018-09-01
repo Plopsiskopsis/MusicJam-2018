@@ -1,6 +1,8 @@
 extends Control
 
-
+func _input(event):
+	if Input.is_action_just_pressed("ui_accept"):
+		_on_start_pressed()
 
 func _on_start_pressed():
 	if Globals.lvl == 0:
