@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/mainship.gd" type="Script" id=1]
 [ext_resource path="res://ships/mainship/test_material.tres" type="Material" id=2]
+[ext_resource path="res://scenes/engineparticles.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ArrayMesh" id=1]
 
@@ -178,7 +179,7 @@ _sections_unfolded = [ "surface_1" ]
 
 extents = Vector3( 5.34734, 1, 3.63399 )
 
-[node name="mainship" type="Area"]
+[node name="mainship" type="Area" index="0"]
 
 input_ray_pickable = false
 input_capture_on_drag = false
@@ -375,5 +376,11 @@ material/0 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.70984 )
 shape = SubResource( 10 )
 disabled = false
+
+[node name="engineparticles" parent="." index="12" instance=ExtResource( 3 )]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 2.29436, -6.48358 )
+emitting = false
+_sections_unfolded = [ "Draw Passes", "Process Material", "Time", "Transform" ]
 
 
