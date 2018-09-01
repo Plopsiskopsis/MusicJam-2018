@@ -9,6 +9,7 @@ var direction
 var begin = Vector3(0.0,0,0)
 var end = Vector3(0,0,15)
 var m = SpatialMaterial.new()
+var target = Vector3()
 
 func _physics_process(delta):
 	if (Input.is_action_pressed("left")):
@@ -22,7 +23,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("down"):
 		direction -= heading.z
 	direction = direction.normalized()
-	var target = direction * speed
+	target = direction * speed
 	velocity = velocity.linear_interpolate(target,accel * delta)
 	if target != Vector3(0,0,0):
 		$engineparticles.emitting = true
