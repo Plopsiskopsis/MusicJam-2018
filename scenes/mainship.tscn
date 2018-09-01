@@ -179,7 +179,7 @@ _sections_unfolded = [ "surface_1" ]
 
 extents = Vector3( 5.34734, 1, 3.63399 )
 
-[node name="mainship" type="KinematicBody" index="0"]
+[node name="mainship" type="KinematicBody"]
 
 input_ray_pickable = true
 input_capture_on_drag = false

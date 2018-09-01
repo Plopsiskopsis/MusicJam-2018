@@ -24,12 +24,12 @@ func _physics_process(delta):
 	direction = direction.normalized()
 	var target = direction * speed
 	velocity = velocity.linear_interpolate(target,accel * delta)
-	if velocity == Vector3(0,0,0):
+	if target != Vector3(0,0,0):
 		$engineparticles.emitting = true
 	else:
 		$engineparticles.emitting = false
 	move_and_slide(velocity)
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("shoot"):
 		shoot()
 	else:
 		$draw.clear()
