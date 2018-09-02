@@ -11,6 +11,8 @@ var end = Vector3(0,0,15)
 var m = SpatialMaterial.new()
 var target = Vector3()
 
+
+
 func _physics_process(delta):
 	if (Input.is_action_pressed("left")):
 		rotation_degrees = rotation_degrees + Vector3(0.0, rot_speed * delta, 0.0);
@@ -35,6 +37,7 @@ func _physics_process(delta):
 		shoot()
 	else:
 		$draw.clear()
+
 
 
 func _ready():
