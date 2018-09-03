@@ -2,6 +2,10 @@ extends Control
 
 func _ready():
 	AudioServer.set_bus_layout(load("res://new_bus_layout.tres"))
+	
+func _input(event):
+	if Input.is_action_just_pressed("5"):
+		visible = !visible
 
 func set_music(music):
 	print(music)
