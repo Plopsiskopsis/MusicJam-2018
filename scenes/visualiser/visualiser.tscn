@@ -4,7 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://music/5 action tunes/Juhani Junkala [Retro Game Music Pack] Title Screen.wav" type="AudioStream" id=3]
 
-[node name="visualiser" type="Control" index="0"]
+[node name="visualiser" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -71,7 +71,7 @@ min_value = -10.0
 max_value = 0.0
 step = 0.1
 page = 0.0
-value = -10.0
+value = -5.0
 exp_edit = false
 rounded = false
 texture_under = null
@@ -102,7 +102,7 @@ min_value = -10.0
 max_value = 0.0
 step = 0.1
 page = 0.0
-value = -10.0
+value = -5.0
 exp_edit = false
 rounded = false
 texture_under = null
@@ -133,7 +133,7 @@ min_value = -10.0
 max_value = 0.0
 step = 0.1
 page = 0.0
-value = -10.0
+value = -5.0
 exp_edit = false
 rounded = false
 texture_under = null
@@ -164,7 +164,7 @@ min_value = -10.0
 max_value = 0.0
 step = 0.1
 page = 0.0
-value = -10.0
+value = -5.0
 exp_edit = false
 rounded = false
 texture_under = null
@@ -195,7 +195,7 @@ min_value = -10.0
 max_value = 0.0
 step = 0.1
 page = 0.0
-value = -10.0
+value = -5.0
 exp_edit = false
 rounded = false
 texture_under = null
@@ -226,7 +226,7 @@ min_value = -10.0
 max_value = 0.0
 step = 0.1
 page = 0.0
-value = -10.0
+value = -5.0
 exp_edit = false
 rounded = false
 texture_under = null

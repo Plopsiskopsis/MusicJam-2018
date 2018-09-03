@@ -37,3 +37,4 @@ func _process(delta):
 	$center/hbox/v5.value = (AudioServer.get_bus_peak_volume_left_db(bus,0) + AudioServer.get_bus_peak_volume_right_db(bus,0)) / 2
 	bus = AudioServer.get_bus_index("6")
 	$center/hbox/v6.value = (AudioServer.get_bus_peak_volume_left_db(bus,0) + AudioServer.get_bus_peak_volume_right_db(bus,0)) / 2
+	#print($center/hbox/v1.value, " ",$center/hbox/v2.value, " ",$center/hbox/v3.value, " ",$center/hbox/v4.value, " ",$center/hbox/v5.value, " ",$center/hbox/v6.value)
