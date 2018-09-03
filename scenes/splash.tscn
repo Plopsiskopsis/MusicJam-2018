@@ -27,7 +27,7 @@ script/source = "extends Sprite
 func _process(delta):
 	get_material().set_shader_param(\"mouse_pos\", get_global_mouse_position().normalized())"
 
-[node name="splash" type="Sprite" index="0"]
+[node name="splash" type="Sprite"]
 
 material = SubResource( 2 )
 position = Vector2( 512, 150 )
