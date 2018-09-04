@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://ships/mainship/engine_particle.tres" type="Material" id=1]
+[ext_resource path="res://ships/mainship/engineparticles.shader" type="Shader" id=1]
 
 [sub_resource type="ParticlesMaterial" id=1]
 
@@ -9,7 +9,7 @@ trail_divisor = 1
 emission_shape = 2
 emission_box_extents = Vector3( 0.2, 0.2, 0.2 )
 flag_align_y = false
-flag_rotate_y = false
+flag_rotate_y = true
 flag_disable_z = false
 spread = 20.0
 flatness = 0.0
@@ -26,8 +26,8 @@ tangential_accel = 0.0
 tangential_accel_random = 0.0
 damping = 3.0
 damping_random = 0.0
-angle = 0.0
-angle_random = 0.0
+angle = 50.0
+angle_random = 1.0
 scale = 0.5
 scale_random = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -38,11 +38,33 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Damping", "Emission Shape", "Gravity", "Hue Variation", "Initial Velocity", "Scale", "Spread" ]
+_sections_unfolded = [ "Angle", "Damping", "Emission Shape", "Flags", "Gravity", "Hue Variation", "Initial Velocity", "Scale", "Spread", "Trail" ]
+
+[sub_resource type="ShaderMaterial" id=4]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 1, 0.773438, 0, 1 )
+shader_param/specular = 0.0
+shader_param/metallic = 0.0
+shader_param/distance_fade_min = 0.0
+shader_param/distance_fade_max = 10.0
+shader_param/roughness = 0.4
+shader_param/point_size = 1.0
+shader_param/metallic_texture_channel = Plane( 1, 0, 0, 0 )
+shader_param/roughness_texture_channel = Plane( 1, 0, 0, 0 )
+shader_param/emission = Color( 1, 0.680939, 0.00390625, 1 )
+shader_param/emission_energy = 1.0
+shader_param/refraction = 0.2
+shader_param/refraction_texture_channel = Plane( 1, 0, 0, 0 )
+shader_param/uv1_scale = Vector3( 1, 1, 1 )
+shader_param/uv1_offset = Vector3( 0, 0, 0 )
+shader_param/uv2_scale = Vector3( 1, 1, 1 )
+shader_param/uv2_offset = Vector3( 0, 0, 0 )
 
 [sub_resource type="CubeMesh" id=2]
 
-material = ExtResource( 1 )
+material = SubResource( 4 )
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 size = Vector3( 0.2, 0.2, 0.2 )
 subdivide_width = 0
