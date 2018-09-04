@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Venus.wav-dfbd699ba67d0f7da3a75f79c27d0f4c.sample"
+path="res://.import/Venus.wav-12b9fc41dae325adbb0ce1ffa42f5e43.sample"
 
 [deps]
 
-source_file="res://music/from SketchyLogic/Venus.wav"
-dest_files=[ "res://.import/Venus.wav-dfbd699ba67d0f7da3a75f79c27d0f4c.sample" ]
+source_file="res://music/Venus.wav"
+dest_files=[ "res://.import/Venus.wav-12b9fc41dae325adbb0ce1ffa42f5e43.sample" ]
 
 [params]
 

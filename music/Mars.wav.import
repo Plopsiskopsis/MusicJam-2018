@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Mercury.wav-ece208d55fde2086fce31cad31822862.sample"
+path="res://.import/Mars.wav-bd2d786afb9745d25e804b67b28b93b5.sample"
 
 [deps]
 
-source_file="res://music/from SketchyLogic/Mercury.wav"
-dest_files=[ "res://.import/Mercury.wav-ece208d55fde2086fce31cad31822862.sample" ]
+source_file="res://music/Mars.wav"
+dest_files=[ "res://.import/Mars.wav-bd2d786afb9745d25e804b67b28b93b5.sample" ]
 
 [params]
 

@@ -8,7 +8,6 @@ func _input(event):
 		visible = !visible
 
 func set_music(music):
-	print(music)
 	$a1.stream = music
 	$a1.playing = true
 	$a2.stream = music

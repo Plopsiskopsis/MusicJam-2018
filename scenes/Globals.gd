@@ -6,6 +6,29 @@ var camera1
 var camera2
 var camera3
 
+var songs
+
+func _ready():
+	songs = list_files_in_directory("res://music/")
+	print(songs)
+
+func list_files_in_directory(path):
+    var files = []
+    var dir = Directory.new()
+    dir.open(path)
+    dir.list_dir_begin()
+
+    while true:
+        var file = dir.get_next()
+        if file == "":
+            break
+        elif not file.begins_with(".") and not file.ends_with("import"):
+            files.append(file)
+
+    dir.list_dir_end()
+
+    return files
+
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
@@ -22,3 +45,4 @@ func _input(event):
 			camera2.current = true
 		if Input.is_action_just_pressed("3"):
 			camera3.current = true
+

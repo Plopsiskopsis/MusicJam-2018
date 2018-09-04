@@ -11,13 +11,7 @@ func _process(delta):
 	translation = fixed_trans + main.translation
 	if main.target != Vector3(0.0, 0.0, 0.0):
 		$engineparticles.emitting = true
-		$engineparticles2.emitting = true
-		$engineparticles3.emitting = true
-		$engineparticles4.emitting = true
 		
 	else:
 		$engineparticles.emitting = false
-		$engineparticles2.emitting = false
-		$engineparticles3.emitting = false
-		$engineparticles4.emitting = false
 		

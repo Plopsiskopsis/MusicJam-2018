@@ -30,8 +30,14 @@ func _physics_process(delta):
 	velocity = velocity.linear_interpolate(target,accel * delta)
 	if target != Vector3(0,0,0):
 		$engineparticles.emitting = true
+		$engineparticles2.emitting = true
+		$engineparticles3.emitting = true
+		$engineparticles4.emitting = true
 	else:
 		$engineparticles.emitting = false
+		$engineparticles2.emitting = false
+		$engineparticles3.emitting = false
+		$engineparticles4.emitting = false
 	move_and_slide(velocity)
 	if Input.is_action_pressed("shoot"):
 		shoot()
