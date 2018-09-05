@@ -7,7 +7,6 @@ func _ready():
 	get_parent().get_node("visualiser").set_music(stream)
 
 func change_music(music):
-	print("res://music/%s" % music)
 	stream = load("res://music/%s" % music)
 	get_parent().get_node("visualiser").set_music(stream)
 
