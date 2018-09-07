@@ -18,7 +18,6 @@ func create_lanes():
 	for i in 10:
 		im.begin(Mesh.PRIMITIVE_LINES)
 		im.add_vertex(Vector3($mainship.translation.x, 0.0, 0.0) + Vector3(lane_offset + i * lane_spacing,0.0,-100.0))
-		print((Vector3($mainship.translation.x, 0.0, 0.0) + Vector3(lane_offset + i * lane_spacing,0.0,-100.0)))
 		im.add_vertex(Vector3($mainship.translation.x, 0.0, 0.0) + Vector3(lane_offset + i * lane_spacing,0.0,100.0))
 		im.end()
 	for z in 10:

@@ -11,7 +11,7 @@ var end = Vector3(0,0,15)
 var m = SpatialMaterial.new()
 var target = Vector3()
 onready var im = get_node("draw") #ImmediateGeometry
-var lane_move = 0.5
+var lane_move = 0.25
 var move_speed = 0.3
 var can_move = true
 
