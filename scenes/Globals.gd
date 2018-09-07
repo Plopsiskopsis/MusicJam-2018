@@ -1,7 +1,7 @@
 extends Node
 
 var lvl = 0
-var lvl1 = preload("res://scenes/level.tscn")
+var lvl1 = preload("res://scenes/mockup.tscn")
 var camera1
 var camera2
 var camera3

@@ -6,9 +6,6 @@
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://music/Juhani Junkala [Retro Game Music Pack] Title Screen.wav" type="AudioStream" id=5]
 
-
-
-
 [sub_resource type="Shader" id=1]
 
 code = "shader_type canvas_item;
@@ -103,6 +100,7 @@ _sections_unfolded = [ "Material", "Rect" ]
 
 [node name="center" type="CenterContainer" parent="." index="1"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0

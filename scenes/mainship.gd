@@ -13,36 +13,36 @@ var target = Vector3()
 
 
 
-func _physics_process(delta):
-	if (Input.is_action_pressed("left")):
-		rotation_degrees = rotation_degrees + Vector3(0.0, rot_speed * delta, 0.0);
-		
-	if (Input.is_action_pressed("right")):
-		rotation_degrees = rotation_degrees + Vector3(0.0, -rot_speed * delta, 0.0);
-	direction = Vector3() 
-	var heading = get_global_transform().basis
-	if Input.is_action_pressed("up"):
-		direction += heading.z
-	if Input.is_action_pressed("down"):
-		direction -= heading.z
-	direction = direction.normalized()
-	target = direction * speed
-	velocity = velocity.linear_interpolate(target,accel * delta)
-	if target != Vector3(0,0,0):
-		$engineparticles.emitting = true
-		$engineparticles2.emitting = true
-		$engineparticles3.emitting = true
-		$engineparticles4.emitting = true
-	else:
-		$engineparticles.emitting = false
-		$engineparticles2.emitting = false
-		$engineparticles3.emitting = false
-		$engineparticles4.emitting = false
-	move_and_slide(velocity)
-	if Input.is_action_pressed("shoot"):
-		shoot()
-	else:
-		$draw.clear()
+#func _physics_process(delta):
+#	if (Input.is_action_pressed("left")):
+#		rotation_degrees = rotation_degrees + Vector3(0.0, rot_speed * delta, 0.0);
+#
+#	if (Input.is_action_pressed("right")):
+#		rotation_degrees = rotation_degrees + Vector3(0.0, -rot_speed * delta, 0.0);
+#	direction = Vector3() 
+#	var heading = get_global_transform().basis
+#	if Input.is_action_pressed("up"):
+#		direction += heading.z
+#	if Input.is_action_pressed("down"):
+#		direction -= heading.z
+#	direction = direction.normalized()
+#	target = direction * speed
+#	velocity = velocity.linear_interpolate(target,accel * delta)
+#	if target != Vector3(0,0,0):
+#		$engineparticles.emitting = true
+#		$engineparticles2.emitting = true
+#		$engineparticles3.emitting = true
+#		$engineparticles4.emitting = true
+#	else:
+#		$engineparticles.emitting = false
+#		$engineparticles2.emitting = false
+#		$engineparticles3.emitting = false
+#		$engineparticles4.emitting = false
+#	move_and_slide(velocity)
+#	if Input.is_action_pressed("shoot"):
+#		shoot()
+#	else:
+#		$draw.clear()
 
 
 
