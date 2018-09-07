@@ -11,22 +11,9 @@ var end = Vector3(0,0,15)
 var m = SpatialMaterial.new()
 var target = Vector3()
 onready var im = get_node("draw") #ImmediateGeometry
-var lane_move = 1.0 
-var move_speed = 5.0
+var lane_move = 0.5
+var move_speed = 0.3
 var can_move = true
-
-func _input(event):
-	if Input.is_action_just_pressed("left") && can_move:
-		$move_tween.interpolate_method(self, "move_and_slide", translation, Vector3(lane_move, 0.0, 0.0),move_speed,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
-		$move_tween.start()
-		can_move = false
-	if Input.is_action_just_pressed("right") && can_move:
-		$move_tween.interpolate_method(self, "move_and_slide", translation, Vector3(-lane_move, 0.0, 0.0),move_speed,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
-		$move_tween.start()
-		can_move = false
-		
-
-
 
 func _ready():
 	Globals.mainship = self
@@ -34,6 +21,19 @@ func _ready():
 	m.flags_unshaded = true
 	m.flags_use_point_size = true
 	m.albedo_color = Color(1.0, 0.0, 0.0, 1.0)
+
+func _input(event):
+	if Input.is_action_just_pressed("left") && can_move:
+		$move_tween.interpolate_method(self, "move", Vector3(0.0, 0.0, 0.0),Vector3(lane_move, 0.0, 0.0),move_speed,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+		$move_tween.start()
+	if Input.is_action_just_pressed("right") && can_move:
+		$move_tween.interpolate_method(self, "move", Vector3(0.0, 0.0, 0.0),Vector3(-lane_move, 0.0, 0.0),move_speed,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+		$move_tween.start()
+
+func move(trans):
+	can_move = false
+	move_and_collide(trans)
+
 
 func shoot():
 	im.set_material_override(m)
