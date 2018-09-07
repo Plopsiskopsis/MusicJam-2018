@@ -5,12 +5,13 @@ var lvl1 = preload("res://scenes/mockup.tscn")
 var camera1
 var camera2
 var camera3
+var mainship
 
 var songs
 
 func _ready():
 	songs = list_files_in_directory("res://music/")
-	print(songs)
+	
 
 func list_files_in_directory(path):
 	var files = []
@@ -44,4 +45,6 @@ func _input(event):
 			camera2.current = true
 		if Input.is_action_just_pressed("3"):
 			camera3.current = true
+
+
 
