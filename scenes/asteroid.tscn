@@ -114,4 +114,6 @@ material/0 = null
 shape = SubResource( 3 )
 disabled = false
 
+[connection signal="body_entered" from="." to="." method="_on_asteroid_body_entered"]
+
 

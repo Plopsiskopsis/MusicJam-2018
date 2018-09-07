@@ -47,3 +47,6 @@ func _on_move_tween_tween_completed(object, key):
 	can_move = true
 	get_parent().create_lanes()
 	
+
+func take_hit():
+	$hit_effect.parts.emitting = true

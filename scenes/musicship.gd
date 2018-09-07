@@ -5,3 +5,6 @@ var fixed_trans = Vector3()
 
 func _ready():
 	fixed_trans = translation
+
+func take_hit():
+	pass

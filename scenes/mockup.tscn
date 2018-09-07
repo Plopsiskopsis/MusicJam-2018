@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/visualiser/visualiser.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/music.tscn" type="PackedScene" id=7]
 
-[node name="mockup" type="Spatial" index="0"]
+[node name="mockup" type="Spatial"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -93,10 +93,10 @@ far = 100.0
 script = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Timer" type="Timer" parent="." index="5"]
+[node name="asteroid_timer" type="Timer" parent="." index="5"]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 0.5
 one_shot = false
 autostart = true
 
@@ -121,7 +121,7 @@ lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="asteroid_timer" to="." method="_on_asteroid_timer_timeout"]
 
 
 [editable path="mainship"]

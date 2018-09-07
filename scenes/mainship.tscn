@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scenes/mainship.gd" type="Script" id=1]
 [ext_resource path="res://ships/bigship/black (Instance).material" type="Material" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://ships/bigship/black (Instance) (Instance) (Instance).material" type="Material" id=15]
 [ext_resource path="res://ships/bigship/_defaultMat (Instance) (Instance).material" type="Material" id=16]
 [ext_resource path="res://scenes/engineparticles.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/hit_effect.tscn" type="PackedScene" id=18]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -370,6 +371,8 @@ playback_speed = 1.0
 playback/active = false
 playback/repeat = false
 playback/speed = 1.0
+
+[node name="hit_effect" parent="." index="8" instance=ExtResource( 18 )]
 
 [connection signal="tween_completed" from="move_tween" to="." method="_on_move_tween_tween_completed"]
 

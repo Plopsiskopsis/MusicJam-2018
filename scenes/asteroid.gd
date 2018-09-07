@@ -7,3 +7,6 @@ func _physics_process(delta):
 	translation.z -= speed
 	if translation.z < minz:
 		queue_free()
+
+func _on_asteroid_body_entered(body):
+	body.take_hit()
