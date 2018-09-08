@@ -11,7 +11,7 @@ var end = Vector3(0,0,15)
 var m = SpatialMaterial.new()
 var target = Vector3()
 onready var im = get_node("draw") #ImmediateGeometry
-var lane_move = 0.25
+var lane_move = 0.30
 var move_speed = 0.3
 var can_move = true
 
@@ -45,8 +45,12 @@ func shoot():
 
 func _on_move_tween_tween_completed(object, key):
 	can_move = true
-	get_parent().create_lanes()
-	
+	$lane_timer.start()
 
 func take_hit():
 	$hit_effect.parts.emitting = true
+
+
+func _on_lane_timer_timeout():
+	get_parent().create_lanes()
+	

@@ -374,6 +374,15 @@ playback/speed = 1.0
 
 [node name="hit_effect" parent="." index="8" instance=ExtResource( 18 )]
 
+[node name="lane_timer" type="Timer" parent="." index="9"]
+
+process_mode = 1
+wait_time = 0.2
+one_shot = true
+autostart = false
+
 [connection signal="tween_completed" from="move_tween" to="." method="_on_move_tween_tween_completed"]
+
+[connection signal="timeout" from="lane_timer" to="." method="_on_lane_timer_timeout"]
 
 

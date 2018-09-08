@@ -17,13 +17,13 @@ func create_lanes():
 	im.set_material_override(m)
 	for i in 10:
 		im.begin(Mesh.PRIMITIVE_LINES)
-		im.add_vertex(Vector3($mainship.translation.x, 0.0, 0.0) + Vector3(lane_offset + i * lane_spacing,0.0,-100.0))
-		im.add_vertex(Vector3($mainship.translation.x, 0.0, 0.0) + Vector3(lane_offset + i * lane_spacing,0.0,100.0))
+		im.add_vertex(Vector3($mainship.translation.x, 0.0, 0.0) + Vector3(lane_offset + (i * lane_spacing),0.0,-100.0))
+		im.add_vertex(Vector3($mainship.translation.x, 0.0, 0.0) + Vector3(lane_offset + (i * lane_spacing),0.0,100.0))
 		im.end()
 	for z in 10:
 		im.begin(Mesh.PRIMITIVE_LINES)
-		im.add_vertex(Vector3($mainship.translation.x, 0.0, 0.0) + Vector3(lane_offset + -z * lane_spacing,0.0,-100.0))
-		im.add_vertex(Vector3($mainship.translation.x, 0.0, 0.0) + Vector3(lane_offset + -z * lane_spacing,0.0,100.0))
+		im.add_vertex(Vector3($mainship.translation.x, 0.0, 0.0) + Vector3(lane_offset + (-z * lane_spacing),0.0,-100.0))
+		im.add_vertex(Vector3($mainship.translation.x, 0.0, 0.0) + Vector3(lane_offset + (-z * lane_spacing),0.0,100.0))
 		im.end()
 
 func _on_asteroid_timer_timeout():
